@@ -4,9 +4,11 @@ import numpy as np
 
 app = Flask(__name__)
 
+
 @app.route('/')
 def home():
-	return render_template('home.html')
+    return render_template('home.html')
+
 
 @app.route('/getdelay',methods=['POST','GET'])
 def get_delay():
@@ -51,5 +53,5 @@ def get_delay():
 
     
 if __name__ == '__main__':
-	app.debug = True
-	app.run()
+    app.debug = True
+    app.run()
